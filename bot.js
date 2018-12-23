@@ -8,7 +8,7 @@ const e = new Discord.Client();
 const f = new Discord.Client();
 const g = new Discord.Client();
 const h = new Discord.Client();
-const prefix = '.';
+const prefix = '!';
 
 client.on('warn', console.warn);
 
@@ -31,7 +31,45 @@ function timerFunc() {
     });
 }
 
+client.on('message', message => {
 
+  if (message.author.bot) return;
+
+  if (!message.content.startsWith(prefix)) return;
+
+
+
+  let command = message.content.split(" ")[0];
+
+  command = command.slice(prefix.length);
+
+
+
+let args = message.content.split(" ").slice(1);
+
+if(!args) return message.channel.send('${prefix}say <words>');	
+
+
+
+if (command == "say") {
+
+if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("*لا تملك الصلاحيات المطلوبه**");
+
+
+
+message.channel.send(args.join("  "))
+
+    message.delete();
+
+  }
+
+});
+client.on('message', message => {
+     if (message.content === "!av-set") {
+client.user.setAvatar(`https://cdn.discordapp.com/avatars/324672376455299074/524312009e5ce435a1adf99080f76e63.jpg`)
+ 
+}
+});
 
 c.on('warn', console.warn);
 
@@ -54,7 +92,45 @@ function timerFuncc() {
     });
 }
 
+c.on('message', message => {
 
+  if (message.author.bot) return;
+
+  if (!message.content.startsWith(prefix)) return;
+
+
+
+  let command = message.content.split(" ")[0];
+
+  command = command.slice(prefix.length);
+
+
+
+let args = message.content.split(" ").slice(1);
+
+if(!args) return message.channel.send('${prefix}say <words>');	
+
+
+
+if (command == "say") {
+
+if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("*لا تملك الصلاحيات المطلوبه**");
+
+
+
+message.channel.send(args.join("  "))
+
+    message.delete();
+
+  }
+
+});
+c.on('message', message => {
+     if (message.content === "!av-set") {
+c.user.setAvatar(`https://cdn.discordapp.com/avatars/324672376455299074/524312009e5ce435a1adf99080f76e63.jpg`)
+ 
+}
+});
 
 //============================================
 d.on('warn', console.warn);
@@ -78,6 +154,45 @@ function timerFuncd() {
     });
 }
 
+d.on('message', message => {
+
+  if (message.author.bot) return;
+
+  if (!message.content.startsWith(prefix)) return;
+
+
+
+  let command = message.content.split(" ")[0];
+
+  command = command.slice(prefix.length);
+
+
+
+let args = message.content.split(" ").slice(1);
+
+if(!args) return message.channel.send('${prefix}say <words>');	
+
+
+
+if (command == "say") {
+
+if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("*لا تملك الصلاحيات المطلوبه**");
+
+
+
+message.channel.send(args.join("  "))
+
+    message.delete();
+
+  }
+
+});
+d.on('message', message => {
+     if (message.content === "!av-set") {
+d.user.setAvatar(`https://cdn.discordapp.com/avatars/324672376455299074/524312009e5ce435a1adf99080f76e63.jpg`)
+ 
+}
+});
 
 
 //============================================
@@ -102,6 +217,45 @@ function timerFunce() {
     });
 }
 
+e.on('message', message => {
+
+  if (message.author.bot) return;
+
+  if (!message.content.startsWith(prefix)) return;
+
+
+
+  let command = message.content.split(" ")[0];
+
+  command = command.slice(prefix.length);
+
+
+
+let args = message.content.split(" ").slice(1);
+
+if(!args) return message.channel.send('${prefix}say <words>');	
+
+
+
+if (command == "say") {
+
+if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("*لا تملك الصلاحيات المطلوبه**");
+
+
+
+message.channel.send(args.join("  "))
+
+    message.delete();
+
+  }
+
+});
+e.on('message', message => {
+     if (message.content === "!av-set") {
+e.user.setAvatar(`https://cdn.discordapp.com/avatars/324672376455299074/524312009e5ce435a1adf99080f76e63.jpg`)
+ 
+}
+});
 
 //============================================
 
@@ -127,6 +281,46 @@ function timerFuncf() {
 }
 
 
+f.on('message', message => {
+
+  if (message.author.bot) return;
+
+  if (!message.content.startsWith(prefix)) return;
+
+
+
+  let command = message.content.split(" ")[0];
+
+  command = command.slice(prefix.length);
+
+
+
+let args = message.content.split(" ").slice(1);
+
+if(!args) return message.channel.send('${prefix}say <words>');	
+
+
+
+if (command == "say") {
+
+if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("*لا تملك الصلاحيات المطلوبه**");
+
+
+
+message.channel.send(args.join("  "))
+
+    message.delete();
+
+  }
+
+});
+f.on('message', message => {
+     if (message.content === "!av-set") {
+f.user.setAvatar(`https://cdn.discordapp.com/avatars/324672376455299074/524312009e5ce435a1adf99080f76e63.jpg`)
+ 
+}
+});
+
 //============================================
 
 g.on('warn', console.warn);
@@ -150,6 +344,46 @@ function timerFuncg() {
     });
 }
 
+g.on('message', message => {
+
+  if (message.author.bot) return;
+
+  if (!message.content.startsWith(prefix)) return;
+
+
+
+  let command = message.content.split(" ")[0];
+
+  command = command.slice(prefix.length);
+
+
+
+let args = message.content.split(" ").slice(1);
+
+if(!args) return message.channel.send('${prefix}say <words>');	
+
+
+
+if (command == "say") {
+
+if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("*لا تملك الصلاحيات المطلوبه**");
+
+
+
+message.channel.send(args.join("  "))
+
+    message.delete();
+
+  }
+
+});
+g.on('message', message => {
+     if (message.content === "!av-set") {
+g.user.setAvatar(`https://cdn.discordapp.com/avatars/324672376455299074/524312009e5ce435a1adf99080f76e63.jpg`)
+ 
+}
+});
+
 
 //============================================
 h.on('warn', console.warn);
@@ -172,6 +406,46 @@ function timerFunch() {
 
     });
 }
+
+h.on('message', message => {
+
+  if (message.author.bot) return;
+
+  if (!message.content.startsWith(prefix)) return;
+
+
+
+  let command = message.content.split(" ")[0];
+
+  command = command.slice(prefix.length);
+
+
+
+let args = message.content.split(" ").slice(1);
+
+if(!args) return message.channel.send('${prefix}say <words>');	
+
+
+
+if (command == "say") {
+
+if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("*لا تملك الصلاحيات المطلوبه**");
+
+
+
+message.channel.send(args.join("  "))
+
+    message.delete();
+
+  }
+
+});
+h.on('message', message => {
+  if (message.content === "!av-set") {
+h.user.setAvatar(`https://cdn.discordapp.com/avatars/324672376455299074/524312009e5ce435a1adf99080f76e63.jpg`)
+ 
+}
+});
 
 
 //============================================
